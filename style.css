@@ -15,12 +15,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
+
+  transition: var(--transition-delay);
   background-color: var(--background-color);
   color: var(--text-color);
 }
 
 body.dark {
-  --accent-color: #89c4f4;
+  --accent-color: #d0d066;
   --background-color: #303030;
   --text-color: #ffffff;
 }
@@ -45,7 +48,33 @@ body.dark {
   transform: scale(1);
 }
 
+.toggle-button .icon {
+  margin-right: 0.5em;
+}
+
 .toggle-button:hover,
 .toggle-button:focus {
   transform: scale(1.1);
+}
+
+.theme-container {
+  --rotation: 0;
+
+  position: absolute;
+  top: 0;
+  height: 200vmin;
+  transform: rotate(var(--rotation));
+}
+
+.sun,
+.moon {
+  position: ablsolute;
+}
+
+.sun {
+  top: 5%;
+}
+
+.moon {
+  bottom: 5%;
 }
